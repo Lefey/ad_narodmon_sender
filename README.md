@@ -23,5 +23,5 @@ key | optional | type | default | description
 `class` | False | string | narodmon_sender | The name of the Class.
 `narodmon_device_mac` | False | string | | MAC-address to identify your device on narodmon.ru
 `narodmon_device_name` | True | string | | Name for your device
-`hass_coordinates_entity` | True | string | | Home assistant zone entity_id for getting latitude and longitude, helps auto placing device on map (optional)
+`hass_coordinates_entity` | True | string | | Home assistant zone entity_id for getting latitude and longitude, helps auto placing device on map
 `hass_sensor_entities` | False | string | | Comma-separated home assistant sensor entity_id`s (without spaces)
