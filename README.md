@@ -3,7 +3,7 @@ Appdaemon app for sending sensor data from home assistant to narodmon.ru
 
 ## Installation
 
-Download the `narodmon_sender` directory from inside the `apps` directory here to your local `apps` directory, then configure parametrs in `config.yaml` file inside `narodmon_sender` folfer.
+Download the `narodmon_sender` directory from inside the `apps` directory here to your local `apps` directory, then configure parameters in `config.yaml` file inside `narodmon_sender` directory.
 
 ## App configuration
 
