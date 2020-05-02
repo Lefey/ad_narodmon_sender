@@ -1,4 +1,5 @@
 """
+ENG
 AppDaemon narodmon.ru sender script
 Credits: @Lefey / https://github.com/Lefey/ad_narodmon_sender
 To enable this script add to /config/appdaemon/apps/apps.yaml:
@@ -9,7 +10,19 @@ narodmon-sender:
   narodmon_device_name: Name for your device (optional)
   hass_coordinates_entity: Home assistant zone entity_id for getting latitude and longitude, helps auto placing device on map (optional)
   hass_sensor_entities: Comma-separated home assistant sensor entity_id`s, without spaces (mandatory)
-For example:
+RU
+AppDaemon скрипт для отправки данных на narodmon.ru
+Автор: @Lefey / https://github.com/Lefey/ad_narodmon_sender
+Для работы скрипта в AppDaemon необходимо прописать параметры в /config/appdaemon/apps/narodmon_sender/config.yaml:
+narodmon-sender:
+  module: narodmon-sender
+  class: narodmon-sender
+  narodmon_device_mac: MAC-адрес идентифицирующий ваше устройство на narodmon.ru, 12-18 символов A-Z и 0-9 без разделителей или разделенных '-' или ':' (обязательный параметр)
+  narodmon_device_name: Имя вашего устройства (не обязательно)
+  hass_coordinates_entity: Зона home assistant для получения координат, для размешения устройства на карте (не обязательно)
+  hass_sensor_entities: Список cенсоров home assistant разделенный запятыми, без пробелов (обязательный параметр)
+
+Example config / Пример конфигурации:
 narodmon_sender:
   module: narodmon_sender
   class: narodmon_sender
