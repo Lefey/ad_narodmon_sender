@@ -1,0 +1,7 @@
+narodmon_sender:
+  module: narodmon_sender
+  class: narodmon_sender
+  narodmon_device_mac: 
+  narodmon_device_name: 
+  hass_coordinates_entity: 
+  hass_sensor_entities: 
