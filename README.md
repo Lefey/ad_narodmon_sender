@@ -25,3 +25,15 @@ key | optional | type | default | description
 `narodmon_device_name` | True | string | | Name for your device
 `hass_coordinates_entity` | True | string | | Home assistant zone entity_id for getting latitude and longitude, helps auto placing device on map
 `hass_sensor_entities` | False | string | | Comma-separated home assistant sensor entity_id`s (without spaces)
+
+## Example app configuration
+
+```yaml
+narodmon_sender:
+  module: narodmon_sender
+  class: narodmon_sender
+  narodmon_device_mac: AABBCCDDEEFF
+  narodmon_device_name: Xiaomi_WSDCGQ01LM
+  hass_coordinates_entity: zone.home
+  hass_sensor_entities: sensor.outside_temperature,sensor.outside_humidity
+  ```
