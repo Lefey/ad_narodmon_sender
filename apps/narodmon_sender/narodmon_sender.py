@@ -128,7 +128,7 @@ class narodmon_sender(hass.Hass):
             sock = socket.socket()
             try:
                 # пробуем подключиться
-                sock.connect(('narodmon.ru', 8213))
+                sock.connect(('narodmon.ru', 8283))
                 # пишем в сокет значения датчиков
                 sock.send(data.encode('utf-8'))
                 # читаем ответ сервера
