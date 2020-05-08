@@ -33,7 +33,7 @@ narodmon_sender:
   module: narodmon_sender
   class: narodmon_sender
   narodmon_device_mac: AABBCCDDEEFF
-  narodmon_device_name: Xiaomi_WSDCGQ01LM
+  narodmon_device_name: Aqara_WSDCGQ11LM
   hass_coordinates_entity: zone.home
-  hass_sensor_entities: sensor.outside_temperature,sensor.outside_humidity
+  hass_sensor_entities: sensor.outside_temperature,sensor.outside_humidity,sensor.outside_pressure
   ```
