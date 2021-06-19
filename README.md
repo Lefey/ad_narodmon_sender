@@ -24,7 +24,7 @@ key | optional | type | default | description
 `narodmon_device_mac` | False | string | | MAC-address to identify your device on narodmon.ru
 `narodmon_device_name` | True | string | | Name for your device
 `hass_coordinates_entity` | True | string | | Home assistant zone entity_id for getting latitude and longitude, helps auto placing device on map
-`hass_sensor_entities` | False | string | | Comma-separated home assistant sensor entity_id`s (without spaces)
+`hass_sensor_entities` | False | string | | Comma-separated home assistant sensor or binary_sensor entity_id`s (without spaces)
 
 ## Example app configuration
 
@@ -35,5 +35,5 @@ narodmon_sender:
   narodmon_device_mac: AABBCCDDEEFF
   narodmon_device_name: Aqara_WSDCGQ11LM
   hass_coordinates_entity: zone.home
-  hass_sensor_entities: sensor.outside_temperature,sensor.outside_humidity,sensor.outside_pressure
+  hass_sensor_entities: sensor.outside_temperature,sensor.outside_humidity,sensor.outside_pressure,binary_sensor.window
   ```
