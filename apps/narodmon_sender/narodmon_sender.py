@@ -127,8 +127,8 @@ class narodmon_sender(hass.Hass):
                         sensor_state = binary_replace[self.get_state(entity)]
                     else:
                         sensor_state = self.get_state(entity)
-                # формируем строку с данными всех рабочих сенсоров
-                sensors_data += '#' + self.sensors_type[entity] + '#' + sensor_state + '#' + self.sensors_name[entity] + '\n'
+                    # формируем строку с данными всех рабочих сенсоров
+                    sensors_data += '#' + self.sensors_type[entity] + '#' + sensor_state + '#' + self.sensors_name[entity] + '\n'
             # собираем пакет данных для отправки: информация об устройстве + данные сенсоров + символ окончания пакета данных
             data = self.device_data + sensors_data + '##'
             # вывод в лог информации которая будет отправлена
