@@ -122,13 +122,14 @@ class narodmon_sender(hass.Hass):
             for entity in self.sensors:
                 # отбрасываем недоступные датчики
                 if self.get_state(entity) != 'unavailable':
+                    if self.get_state(entity) != 'unknown':
                     # замена состояния бинарных датчиков (on на 1 и off на 0), narodmon.ru не принимает в текстовом виде.
-                    if self.get_state(entity) in binary_replace:
-                        sensor_state = binary_replace[self.get_state(entity)]
-                    else:
-                        sensor_state = self.get_state(entity)
-                    # формируем строку с данными всех рабочих сенсоров
-                    sensors_data += '#' + self.sensors_type[entity] + '#' + sensor_state + '#' + self.sensors_name[entity] + '\n'
+                        if self.get_state(entity) in binary_replace:
+                            sensor_state = binary_replace[self.get_state(entity)]
+                        else:
+                            sensor_state = self.get_state(entity)
+                        # формируем строку с данными всех рабочих сенсоров
+                        sensors_data += '#' + self.sensors_type[entity] + '#' + sensor_state + '#' + self.sensors_name[entity] + '\n'
             # собираем пакет данных для отправки: информация об устройстве + данные сенсоров + символ окончания пакета данных
             data = self.device_data + sensors_data + '##'
             # вывод в лог информации которая будет отправлена
