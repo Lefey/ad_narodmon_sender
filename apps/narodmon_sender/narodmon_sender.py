@@ -35,6 +35,7 @@ import appdaemon.plugins.hass.hassapi as hass
 import socket
 import datetime
 import collections
+import pytz
 
 class narodmon_sender(hass.Hass):
     #метод запускаемый однократно при старте программы
@@ -109,7 +110,7 @@ class narodmon_sender(hass.Hass):
         else:
             exit('Please, specify hass_sensor_entities variable in /config/appdaemon/apps/narodmon_sender/config.yaml')
         # вызвываем метод отправки данных каждые 5 минут, начиная с текушего времени 
-        self.run_every(self.send_data, datetime.datetime.now() + datetime.timedelta(seconds=2), 360)
+        self.run_every(self.send_data, datetime.datetime.now(pytz.utc) + datetime.timedelta(seconds=2), 360)
     # метод для отправки данных
     def send_data(self, kwargs):
         binary_replace = {
