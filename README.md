@@ -37,3 +37,8 @@ narodmon_sender:
   hass_coordinates_entity: zone.home
   hass_sensor_entities: sensor.outside_temperature,sensor.outside_humidity,sensor.outside_pressure,binary_sensor.window
   ```
+
+Happy to receive your thanks!
+
+<a href="https://pay.cloudtips.ru/p/eb0b1d9c" target="_blank"><img src="https://api.cloudtips.ru/api/layouts/qr/eb0b1d9c.png" width="128" height="auto" title="Donate"></img></a><br>
+<a href="https://pay.cloudtips.ru/p/eb0b1d9c" target="_blank">Support with donation</a>
